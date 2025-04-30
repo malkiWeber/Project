@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Project\\CarRental\\Dal\\Dal.csproj": {}
+    "H:\\Project C#\\CarRental\\Dal\\Dal.csproj": {}
   },
   "projects": {
-    "H:\\Project\\CarRental\\Dal\\Dal.csproj": {
+    "H:\\Project C#\\CarRental\\Dal\\Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Project\\CarRental\\Dal\\Dal.csproj",
+        "projectUniqueName": "H:\\Project C#\\CarRental\\Dal\\Dal.csproj",
         "projectName": "Dal",
-        "projectPath": "H:\\Project\\CarRental\\Dal\\Dal.csproj",
-        "packagesPath": "C:\\Users\\וובר תמר\\.nuget\\packages\\",
-        "outputPath": "H:\\Project\\CarRental\\Dal\\obj\\",
+        "projectPath": "H:\\Project C#\\CarRental\\Dal\\Dal.csproj",
+        "packagesPath": "C:\\Users\\כהן מרים\\.nuget\\packages\\",
+        "outputPath": "H:\\Project C#\\CarRental\\Dal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\וובר תמר\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\כהן מרים\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -88,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

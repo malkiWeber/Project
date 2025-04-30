@@ -1,0 +1,55 @@
+כדי לממש את הפונקציה `AddNewCustomer` ולוודא שהלקוח לא קיים כבר, תוכל לבצע את הצעדים הבאים:
+
+1. בדוק אם הלקוח קיים באמצעות פונקציה `IsExist`.
+2. אם הלקוח לא קיים, הוסף את הלקוח החדש למסד הנתונים.
+
+להלן דוגמה לאופן שבו תוכל לממש את הפונקציה:
+
+```csharp
+public bool AddNewCustomer(int id, string firstName, string? lastName, int phoneNumber, string? email, string city, string street, int? buildingNumber)
+{
+    // בדוק אם הלקוח כבר קיים
+    if (IsExist(id))
+    {
+        return false; // הלקוח כבר קיים
+    }
+
+    try
+    {
+        Customer newCustomer = new Customer
+        {
+            Id = id,
+            IdNavigation = new User
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                PhonNumber = phoneNumber,
+                Email = email,
+                City = city,
+                Street = street,
+                BuildingNumber = buildingNumber
+            }
+        };
+
+        // הוסף את הלקוח למסד הנתונים
+        data.Customers.Add(newCustomer);
+        data.SaveChanges(); // שמור את השינויים במסד הנתונים
+
+        return true; // הלקוח נוסף בהצלחה
+    }
+    catch (Exception ex)
+    {
+        // כאן אתה יכול לדווח על שגיאות בהתאם לצורך
+        Console.WriteLine($"Error adding customer: {ex.Message}");
+        return false; // החזרת ערך פועל לא הצליחה
+    }
+}
+```
+
+### הסבר:
+- **IsExist(id)**: הפונקציה בודקת אם הלקוח קיים במסד הנתונים לפי ה-ID שנתון.
+- **Customer newCustomer**: נוצרת מופע חדש של `Customer` שמכיל את הנתונים שניתנים.
+- **data.Customers.Add(newCustomer)**: הוספת הלקוח החדש לרשימת הלקוחות במבנה הנתונים.
+- **data.SaveChanges()**: שמירה של השינויים במסד הנתונים.
+  
+ודא שבדקת שגיאות כלל עקרוני על ידי בלוק try-catch, כדי לתפוס בעיות פוטנציאליות במהלך ההוספה למסד הנתונים.

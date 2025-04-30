@@ -10,6 +10,8 @@ namespace Dal.Api
     internal interface IRenting
     {
 
+        List<Renting> GetAllRenting();
+
     }
 }
 
